@@ -1,24 +1,12 @@
 import { useState } from 'react';
 
 const RandomColor = () => {
+    // css for button
     const styleButton = 'w-[30vw] border mt-10 w-[200px] h-[40px] rounded-lg hover:text-2xl text-xl text-white';
 
     const [typeOfColor, setTypeOfColor] = useState('hex');
     const [color, setColor] = useState('#000000');
     const [colorComplementary, setColorComplementary] = useState('#FFFFFF');
-
-    // complementary Color
-    const complementaryColor = () => {
-        const r = randomColor(256);
-        const g = randomColor(256);
-        const b = randomColor(256);
-
-        let complementaryR = 255 - r;
-        let complementaryG = 255 - g;
-        let complementaryB = 255 - b;
-
-        setColorComplementary(`rgb(${complementaryR},${complementaryG},${complementaryB})`);
-    };
 
     // random color
     const randomColor = (lengthArray) => {
